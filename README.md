@@ -247,7 +247,10 @@ Check
 ```
 
 
+Should see:
 
+
+```bash
 
 usage: flye (--pacbio-raw | --pacbio-corr | --pacbio-hifi | --nano-raw |
              --nano-corr | --subassemblies) file1 [file_2 ...]
@@ -326,6 +329,7 @@ You can run Flye polisher as a standalone tool using
 
 
 ```
+
 
 Fine! Flye is installed. 
 
