@@ -207,4 +207,140 @@ Complete documentation at http://canu.readthedocs.org/en/latest/
 ```
 
 
+### Flye
 
+
+
+
+First install python3
+
+```bash
+
+sudo yum install python3-devel
+
+``
+
+
+clone the repository and compile
+
+
+
+```bash
+
+sudo git clone https://github.com/fenderglass/Flye
+
+cd Flye
+
+sudo make
+
+```
+
+
+Check
+
+
+```bash
+
+./flye -h
+
+
+```
+
+
+
+
+usage: flye (--pacbio-raw | --pacbio-corr | --pacbio-hifi | --nano-raw |
+             --nano-corr | --subassemblies) file1 [file_2 ...]
+             --out-dir PATH
+
+             [--genome-size SIZE] [--threads int] [--iterations int]
+             [--meta] [--plasmids] [--trestle] [--polish-target]
+             [--keep-haplotypes] [--debug] [--version] [--help]
+             [--resume] [--resume-from] [--stop-after]
+             [--hifi-error] [--min-overlap SIZE]
+
+Assembly of long reads with repeat graphs
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --pacbio-raw path [path ...]
+                        PacBio raw reads
+  --pacbio-corr path [path ...]
+                        PacBio corrected reads
+  --pacbio-hifi path [path ...]
+                        PacBio HiFi reads
+  --nano-raw path [path ...]
+                        ONT raw reads
+  --nano-corr path [path ...]
+                        ONT corrected reads
+  --subassemblies path [path ...]
+                        high-quality contigs input
+  -g size, --genome-size size
+                        estimated genome size (for example, 5m or 2.6g)
+  -o path, --out-dir path
+                        Output directory
+  -t int, --threads int
+                        number of parallel threads [1]
+  -i int, --iterations int
+                        number of polishing iterations [1]
+  -m int, --min-overlap int
+                        minimum overlap between reads [auto]
+  --asm-coverage int    reduced coverage for initial disjointig assembly [not
+                        set]
+  --hifi-error float    expected HiFi reads error rate (e.g. 0.01 or 0.001)
+                        [0.01]
+  --plasmids            rescue short unassembled plasmids
+  --meta                metagenome / uneven coverage mode
+  --keep-haplotypes     do not collapse alternative haplotypes
+  --trestle             enable Trestle [disabled]
+  --polish-target path  run polisher on the target sequence
+  --resume              resume from the last completed stage
+  --resume-from stage_name
+                        resume from a custom stage
+  --stop-after stage_name
+                        stop after the specified stage completed
+  --debug               enable debug output
+  -v, --version         show program's version number and exit
+
+Input reads can be in FASTA or FASTQ format, uncompressed
+or compressed with gz. Currently, PacBio (raw, corrected, HiFi)
+and ONT reads (raw, corrected) are supported. Expected error rates are
+<30% for raw, <3% for corrected, and <1% for HiFi. Note that Flye
+was primarily developed to run on raw reads. Additionally, the
+--subassemblies option performs a consensus assembly of multiple
+sets of high-quality contigs. You may specify multiple
+files with reads (separated by spaces). Mixing different read
+types is not yet supported. The --meta option enables the mode
+for metagenome/uneven coverage assembly.
+
+Genome size estimate is no longer a required option. You
+need to provide an estimate if using --asm-coverage option.
+
+To reduce memory consumption for large genome assemblies,
+you can use a subset of the longest reads for initial disjointig
+assembly by specifying --asm-coverage and --genome-size options. Typically,
+40x coverage is enough to produce good disjointigs.
+
+You can run Flye polisher as a standalone tool using
+--polish-target option.
+
+
+```
+
+Fine! Flye is installed. 
+
+
+
+### Hifiasm
+
+
+Just do:
+
+
+```bash
+
+$ sudo git clone https://github.com/chhylp123/hifiasm
+
+$ cd hifiasm && make
+
+```
