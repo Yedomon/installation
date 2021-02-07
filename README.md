@@ -348,3 +348,183 @@ $ sudo git clone https://github.com/chhylp123/hifiasm
 $ cd hifiasm && make
 
 ```
+
+
+
+
+### Install the conda package manager
+
+
+```bash
+
+# download latest conda installer
+$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+```
+
+Now lets install conda:
+
+
+```bash
+
+# run the installer
+$ bash Miniconda3-latest-Linux-x86_64.sh
+
+```
+
+
+Accept the license
+
+
+
+```bash
+
+
+Do you accept the license terms? [yes|no]
+
+
+```
+
+
+
+Press `Yes`
+
+
+After you accepted the license agreement conda will be installed. At the end of the installation you will encounter the following:
+
+```bash
+
+Preparing transaction: done
+Executing transaction: done
+installation finished.
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+
+
+```
+
+
+Should see the last info
+
+
+```bash
+
+
+
+no change     /home/kplee/miniconda3/condabin/conda
+no change     /home/kplee/miniconda3/bin/conda
+no change     /home/kplee/miniconda3/bin/conda-env
+no change     /home/kplee/miniconda3/bin/activate
+no change     /home/kplee/miniconda3/bin/deactivate
+no change     /home/kplee/miniconda3/etc/profile.d/conda.sh
+no change     /home/kplee/miniconda3/etc/fish/conf.d/conda.fish
+no change     /home/kplee/miniconda3/shell/condabin/Conda.psm1
+no change     /home/kplee/miniconda3/shell/condabin/conda-hook.ps1
+no change     /home/kplee/miniconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /home/kplee/miniconda3/etc/profile.d/conda.csh
+modified      /home/kplee/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+If you'd prefer that conda's base environment not be activated on startup,
+   set the auto_activate_base parameter to false:
+
+conda config --set auto_activate_base false
+
+Thank you for installing Miniconda3!
+
+
+```
+
+
+
+close and open the terminal
+
+
+
+After closing and re-opening the shell/terminal, we should be able to use the conda command:
+
+
+
+```bash
+
+$ conda update --yes conda
+
+
+```
+
+Installing conda channels to make tools available
+
+```bash
+
+
+# Install some conda channels
+# A channel is where conda looks for packages
+$ conda config --add channels defaults
+$ conda config --add channels bioconda
+$ conda config --add channels conda-forge
+
+
+```
+
+### Peregrine
+
+Upgrade the gcc
+
+
+```python
+
+
+$ yum -y install centos-release-scl
+$ yum -y install devtoolset-7-gcc devtoolset-7-gcc-c++ devtoolset-7-binutils
+$ scl enable devtoolset-7 bash
+
+
+```
+
+Check
+
+
+
+
+```python
+
+gcc -v
+
+```
+get this:
+
+
+```python
+
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-7/root/usr/libexec/gcc/x86_64-redhat-linux/7/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-7/root/usr --mandir=/opt/rh/devtoolset-7/root/usr/share/man --infodir=/opt/rh/devtoolset-7/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-7.3.1-20180303/obj-x86_64-redhat-linux/isl-install --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 7.3.1 20180303 (Red Hat 7.3.1-5) (GCC)
+
+
+
+````
+
+
+Download and install via conda
+
+```python
+
+git clone https://github.com/cschin/Peregrine.git
+
+cd Peregrine
+
+bash install_with_conda.sh
+
+```
+
+
+Note: 
+I modified the sh file by replacing `. ~/miniconda3/bin/activate` by `. ~/anaconda3/bin/activate`
+
+
+
