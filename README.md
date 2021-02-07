@@ -210,15 +210,15 @@ Complete documentation at http://canu.readthedocs.org/en/latest/
 ### Flye
 
 
-
-
 First install python3
+
+
 
 ```bash
 
 sudo yum install python3-devel
 
-``
+```
 
 
 clone the repository and compile
