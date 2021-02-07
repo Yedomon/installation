@@ -528,3 +528,13 @@ I modified the sh file by replacing `. ~/miniconda3/bin/activate` by `. ~/anacon
 
 
 
+### Improved Phased Assembly HiFi Genome Assembler
+
+
+```python
+
+conda create -n ipa
+conda activate ipa
+conda install pbipa
+
+```
