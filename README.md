@@ -1,6 +1,378 @@
 # Installation
 
 
+### Miniconda3 
+
+
+
+
+Step 1: Download latest conda installer
+
+
+```python
+
+$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+
+```
+
+
+
+Log info
+
+
+
+```
+
+--2021-02-12 18:18:56--  https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+Resolving repo.continuum.io (repo.continuum.io)... 104.18.200.79, 104.18.201.79, 2606:4700::6812:c94f, ...
+Connecting to repo.continuum.io (repo.continuum.io)|104.18.200.79|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh [following]
+--2021-02-12 18:18:56--  https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+Resolving repo.anaconda.com (repo.anaconda.com)... 104.16.131.3, 104.16.130.3, 2606:4700::6810:8203, ...
+Connecting to repo.anaconda.com (repo.anaconda.com)|104.16.131.3|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 94235922 (90M) [application/x-sh]
+Saving to: ‘Miniconda3-latest-Linux-x86_64.sh’
+
+100%[=====================================================================================================================================================================>] 94,235,922  51.0MB/s   in 1.8s
+
+2021-02-12 18:18:58 (51.0 MB/s) - ‘Miniconda3-latest-Linux-x86_64.sh’ saved [94235922/94235922]
+
+```
+
+
+Step 2: Run the installer
+
+
+```python
+
+$ bash Miniconda3-latest-Linux-x86_64.sh
+
+
+```
+
+Log info
+
+```
+
+Welcome to Miniconda3 py38_4.9.2
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+>>>
+
+
+```
+Press ENTER untill this message appear
+
+
+```
+
+Do you accept the license terms? [yes|no]
+
+
+```
+
+
+Type *yes*
+
+
+
+Log info
+
+
+```
+
+Miniconda3 will now be installed into this location:
+/home/kplee/miniconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/kplee/miniconda3] >>> /home/kplee/program/miniconda3
+
+
+```
+
+I set */home/kplee/program/miniconda3* as the installation path and press *ENTER*
+
+
+
+Log info
+
+```
+PREFIX=/home/kplee/program/miniconda3
+Unpacking payload ...
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kplee/program/miniconda3
+
+  added / updated specs:
+    - _libgcc_mutex==0.1=main
+    - brotlipy==0.7.0=py38h27cfd23_1003
+    - ca-certificates==2020.10.14=0
+    - certifi==2020.6.20=pyhd3eb1b0_3
+    - cffi==1.14.3=py38h261ae71_2
+    - chardet==3.0.4=py38h06a4308_1003
+    - conda-package-handling==1.7.2=py38h03888b9_0
+    - conda==4.9.2=py38h06a4308_0
+    - cryptography==3.2.1=py38h3c74f83_1
+    - idna==2.10=py_0
+    - ld_impl_linux-64==2.33.1=h53a641e_7
+    - libedit==3.1.20191231=h14c3975_1
+    - libffi==3.3=he6710b0_2
+    - libgcc-ng==9.1.0=hdf63c60_0
+    - libstdcxx-ng==9.1.0=hdf63c60_0
+    - ncurses==6.2=he6710b0_1
+    - openssl==1.1.1h=h7b6447c_0
+    - pip==20.2.4=py38h06a4308_0
+    - pycosat==0.6.3=py38h7b6447c_1
+    - pycparser==2.20=py_2
+    - pyopenssl==19.1.0=pyhd3eb1b0_1
+    - pysocks==1.7.1=py38h06a4308_0
+    - python==3.8.5=h7579374_1
+    - readline==8.0=h7b6447c_0
+    - requests==2.24.0=py_0
+    - ruamel_yaml==0.15.87=py38h7b6447c_1
+    - setuptools==50.3.1=py38h06a4308_1
+    - six==1.15.0=py38h06a4308_0
+    - sqlite==3.33.0=h62c20be_0
+    - tk==8.6.10=hbc83047_0
+    - tqdm==4.51.0=pyhd3eb1b0_0
+    - urllib3==1.25.11=py_0
+    - wheel==0.35.1=pyhd3eb1b0_0
+    - xz==5.2.5=h7b6447c_0
+    - yaml==0.2.5=h7b6447c_0
+    - zlib==1.2.11=h7b6447c_3
+
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  brotlipy           pkgs/main/linux-64::brotlipy-0.7.0-py38h27cfd23_1003
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2020.10.14-0
+  certifi            pkgs/main/noarch::certifi-2020.6.20-pyhd3eb1b0_3
+  cffi               pkgs/main/linux-64::cffi-1.14.3-py38h261ae71_2
+  chardet            pkgs/main/linux-64::chardet-3.0.4-py38h06a4308_1003
+  conda              pkgs/main/linux-64::conda-4.9.2-py38h06a4308_0
+  conda-package-han~ pkgs/main/linux-64::conda-package-handling-1.7.2-py38h03888b9_0
+  cryptography       pkgs/main/linux-64::cryptography-3.2.1-py38h3c74f83_1
+  idna               pkgs/main/noarch::idna-2.10-py_0
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.33.1-h53a641e_7
+  libedit            pkgs/main/linux-64::libedit-3.1.20191231-h14c3975_1
+  libffi             pkgs/main/linux-64::libffi-3.3-he6710b0_2
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-9.1.0-hdf63c60_0
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-9.1.0-hdf63c60_0
+  ncurses            pkgs/main/linux-64::ncurses-6.2-he6710b0_1
+  openssl            pkgs/main/linux-64::openssl-1.1.1h-h7b6447c_0
+  pip                pkgs/main/linux-64::pip-20.2.4-py38h06a4308_0
+  pycosat            pkgs/main/linux-64::pycosat-0.6.3-py38h7b6447c_1
+  pycparser          pkgs/main/noarch::pycparser-2.20-py_2
+  pyopenssl          pkgs/main/noarch::pyopenssl-19.1.0-pyhd3eb1b0_1
+  pysocks            pkgs/main/linux-64::pysocks-1.7.1-py38h06a4308_0
+  python             pkgs/main/linux-64::python-3.8.5-h7579374_1
+  readline           pkgs/main/linux-64::readline-8.0-h7b6447c_0
+  requests           pkgs/main/noarch::requests-2.24.0-py_0
+  ruamel_yaml        pkgs/main/linux-64::ruamel_yaml-0.15.87-py38h7b6447c_1
+  setuptools         pkgs/main/linux-64::setuptools-50.3.1-py38h06a4308_1
+  six                pkgs/main/linux-64::six-1.15.0-py38h06a4308_0
+  sqlite             pkgs/main/linux-64::sqlite-3.33.0-h62c20be_0
+  tk                 pkgs/main/linux-64::tk-8.6.10-hbc83047_0
+  tqdm               pkgs/main/noarch::tqdm-4.51.0-pyhd3eb1b0_0
+  urllib3            pkgs/main/noarch::urllib3-1.25.11-py_0
+  wheel              pkgs/main/noarch::wheel-0.35.1-pyhd3eb1b0_0
+  xz                 pkgs/main/linux-64::xz-5.2.5-h7b6447c_0
+  yaml               pkgs/main/linux-64::yaml-0.2.5-h7b6447c_0
+  zlib               pkgs/main/linux-64::zlib-1.2.11-h7b6447c_3
+
+
+Preparing transaction: done
+Executing transaction: done
+installation finished.
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+[no] >>>
+
+```
+
+
+I typed *yes*
+
+
+Log info
+
+
+```
+no change     /home/kplee/program/miniconda3/condabin/conda
+no change     /home/kplee/program/miniconda3/bin/conda
+no change     /home/kplee/program/miniconda3/bin/conda-env
+no change     /home/kplee/program/miniconda3/bin/activate
+no change     /home/kplee/program/miniconda3/bin/deactivate
+no change     /home/kplee/program/miniconda3/etc/profile.d/conda.sh
+no change     /home/kplee/program/miniconda3/etc/fish/conf.d/conda.fish
+no change     /home/kplee/program/miniconda3/shell/condabin/Conda.psm1
+no change     /home/kplee/program/miniconda3/shell/condabin/conda-hook.ps1
+no change     /home/kplee/program/miniconda3/lib/python3.8/site-packages/xontrib/conda.xsh
+no change     /home/kplee/program/miniconda3/etc/profile.d/conda.csh
+modified      /home/kplee/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+If you'd prefer that conda's base environment not be activated on startup,
+   set the auto_activate_base parameter to false:
+
+conda config --set auto_activate_base false
+
+Thank you for installing Miniconda3!
+
+
+```
+
+Please close and reopen the terminal, to complete the installation.
+
+After closing and re-opening the shell/terminal, we should be able to use the conda command:
+
+
+```python
+
+$ conda update --yes conda
+
+```
+
+
+Log info
+
+
+```
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kplee/program/miniconda3
+
+  added / updated specs:
+    - conda
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _openmp_mutex-4.5          |            1_gnu          22 KB
+    ca-certificates-2021.1.19  |       h06a4308_0         121 KB
+    certifi-2020.12.5          |   py38h06a4308_0         141 KB
+    cffi-1.14.4                |   py38h261ae71_0         226 KB
+    chardet-4.0.0              |py38h06a4308_1003         194 KB
+    cryptography-3.3.1         |   py38h3c74f83_0         566 KB
+    idna-2.10                  |     pyhd3eb1b0_0          52 KB
+    ld_impl_linux-64-2.35.1    |       h2b15070_1         627 KB
+    libgcc-ng-9.3.0            |      h9cbead1_17         7.8 MB
+    libgomp-9.3.0              |      h9cbead1_17         377 KB
+    libstdcxx-ng-9.3.0         |      h2ae2ef3_17         4.0 MB
+    openssl-1.1.1i             |       h27cfd23_0         2.5 MB
+    pip-20.3.3                 |   py38h06a4308_0         1.8 MB
+    pyopenssl-20.0.1           |     pyhd3eb1b0_1          49 KB
+    readline-8.1               |       h27cfd23_0         362 KB
+    requests-2.25.1            |     pyhd3eb1b0_0          52 KB
+    setuptools-52.0.0          |   py38h06a4308_0         714 KB
+    tqdm-4.56.0                |     pyhd3eb1b0_0          80 KB
+    urllib3-1.26.3             |     pyhd3eb1b0_0         105 KB
+    wheel-0.36.2               |     pyhd3eb1b0_0          33 KB
+    ------------------------------------------------------------
+                                           Total:        19.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-4.5-1_gnu
+  libgomp            pkgs/main/linux-64::libgomp-9.3.0-h9cbead1_17
+
+The following packages will be UPDATED:
+
+  ca-certificates                              2020.10.14-0 --> 2021.1.19-h06a4308_0
+  certifi            pkgs/main/noarch::certifi-2020.6.20-p~ --> pkgs/main/linux-64::certifi-2020.12.5-py38h06a4308_0
+  cffi                                1.14.3-py38h261ae71_2 --> 1.14.4-py38h261ae71_0
+  chardet                           3.0.4-py38h06a4308_1003 --> 4.0.0-py38h06a4308_1003
+  cryptography                         3.2.1-py38h3c74f83_1 --> 3.3.1-py38h3c74f83_0
+  ld_impl_linux-64                        2.33.1-h53a641e_7 --> 2.35.1-h2b15070_1
+  libgcc-ng                                9.1.0-hdf63c60_0 --> 9.3.0-h9cbead1_17
+  libstdcxx-ng                             9.1.0-hdf63c60_0 --> 9.3.0-h2ae2ef3_17
+  openssl                                 1.1.1h-h7b6447c_0 --> 1.1.1i-h27cfd23_0
+  pip                                 20.2.4-py38h06a4308_0 --> 20.3.3-py38h06a4308_0
+  pyopenssl                             19.1.0-pyhd3eb1b0_1 --> 20.0.1-pyhd3eb1b0_1
+  readline                                   8.0-h7b6447c_0 --> 8.1-h27cfd23_0
+  requests                                      2.24.0-py_0 --> 2.25.1-pyhd3eb1b0_0
+  setuptools                          50.3.1-py38h06a4308_1 --> 52.0.0-py38h06a4308_0
+  tqdm                                  4.51.0-pyhd3eb1b0_0 --> 4.56.0-pyhd3eb1b0_0
+  urllib3                                      1.25.11-py_0 --> 1.26.3-pyhd3eb1b0_0
+  wheel                                 0.35.1-pyhd3eb1b0_0 --> 0.36.2-pyhd3eb1b0_0
+
+The following packages will be DOWNGRADED:
+
+  idna                                            2.10-py_0 --> 2.10-pyhd3eb1b0_0
+
+
+
+Downloading and Extracting Packages
+tqdm-4.56.0          | 80 KB     | #################################################################################################################################################################### | 100%
+libgomp-9.3.0        | 377 KB    | #################################################################################################################################################################### | 100%
+pyopenssl-20.0.1     | 49 KB     | #################################################################################################################################################################### | 100%
+chardet-4.0.0        | 194 KB    | #################################################################################################################################################################### | 100%
+cryptography-3.3.1   | 566 KB    | #################################################################################################################################################################### | 100%
+cffi-1.14.4          | 226 KB    | #################################################################################################################################################################### | 100%
+libgcc-ng-9.3.0      | 7.8 MB    | #################################################################################################################################################################### | 100%
+ld_impl_linux-64-2.3 | 627 KB    | #################################################################################################################################################################### | 100%
+certifi-2020.12.5    | 141 KB    | #################################################################################################################################################################### | 100%
+requests-2.25.1      | 52 KB     | #################################################################################################################################################################### | 100%
+ca-certificates-2021 | 121 KB    | #################################################################################################################################################################### | 100%
+_openmp_mutex-4.5    | 22 KB     | #################################################################################################################################################################### | 100%
+readline-8.1         | 362 KB    | #################################################################################################################################################################### | 100%
+openssl-1.1.1i       | 2.5 MB    | #################################################################################################################################################################### | 100%
+pip-20.3.3           | 1.8 MB    | #################################################################################################################################################################### | 100%
+urllib3-1.26.3       | 105 KB    | #################################################################################################################################################################### | 100%
+libstdcxx-ng-9.3.0   | 4.0 MB    | #################################################################################################################################################################### | 100%
+idna-2.10            | 52 KB     | #################################################################################################################################################################### | 100%
+wheel-0.36.2         | 33 KB     | #################################################################################################################################################################### | 100%
+setuptools-52.0.0    | 714 KB    | #################################################################################################################################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+
+```
+
+
+
+Step 4: Installing conda channels to make tools available
+Different tools are packaged in what conda calls channels. We need to add some channels to make the bioinformatics and genomics tools available for installation:
+
+```python
+# Install some conda channels
+# A channel is where conda looks for packages
+$ conda config --add channels defaults
+$ conda config --add channels bioconda
+$ conda config --add channels conda-forge
+
+```
+
+Attention
+
+The order of adding channels is important. Make sure you use the shown order of commands.
+
+
+
+
+
+
+
+
 ### Pac-Bio Hifi assemblers
 
 #### Hi-canu
@@ -974,4 +1346,130 @@ Status: Downloaded newer image for cschin/peregrine:latest
 docker.io/cschin/peregrine:latest
 
 ```
-docker run -it --rm -v /home/kplee/program/peregrine:/wd cschin/peregrine:latest test
+
+
+prepare the input file
+
+find /home/kplee/datafile/001.i.bat.pacbio.hifi.reads/ -name "S_unknown.ccs.merged.fasta" | sort > seqdata.lst 
+
+docker run -it -v //home/kplee/analysis/01.peregrine_assembly_sweetpotato_pacbio_hifi_data://home/kplee/analysis/01.peregrine_assembly_sweetpotato_pacbio_hifi_data \ cschin/peregrine:latest asm \
+/home/kplee/analysis/01.peregrine_assembly_sweetpotato_pacbio_hifi_data/seqdata.lst \ 
+--with-consensus --shimmer-r 3 --best_n_ovlp 8 \ 
+
+
+
+/usr/bin/time -o out.txt -v sudo docker run -it -v /home/kplee/analysis/01.peregrine_assembly_sweetpotato_pacbio_hifi_data:/wd \
+--user $(id -u):$(id -g) cschin/peregrine:latest asm \
+/home/kplee/analysis/01.peregrine_assembly_sweetpotato_pacbio_hifi_data/seqdata.lst 32 32 32 32 32 32 32 32 32 --with-consensus --with-alt --shimmer-r 3 \
+--best n ovlp 8 --output /home/kplee/analysis/01.peregrine_assembly_sweetpotato_pacbio_hifi_data/
+
+
+
+
+
+
+
+
+
+Install ggc compiler version 9.3 using conda
+
+```python
+
+$ conda install -c conda-forge gcc_linux-64
+
+```
+
+
+
+Log info
+
+```
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/kplee/program/miniconda3
+
+  added / updated specs:
+    - gcc_linux-64
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    binutils_impl_linux-64-2.35.1|       hd53bc6c_1         9.5 MB
+    binutils_linux-64-2.35     |      hc3fd857_29          22 KB  conda-forge
+    ca-certificates-2020.12.5  |       ha878542_0         137 KB  conda-forge
+    certifi-2020.12.5          |   py38h578d9bd_1         143 KB  conda-forge
+    conda-4.9.2                |   py38h578d9bd_0         3.0 MB  conda-forge
+    gcc_impl_linux-64-9.3.0    |      h70c0ae5_18        43.1 MB  conda-forge
+    gcc_linux-64-9.3.0         |      h7247604_29          23 KB  conda-forge
+    kernel-headers_linux-64-2.6.32|      h77966d4_13         707 KB  conda-forge
+    libgcc-devel_linux-64-9.3.0|      h7864c58_18         4.0 MB  conda-forge
+    openssl-1.1.1i             |       h7f98852_0         2.1 MB  conda-forge
+    python_abi-3.8             |           1_cp38           4 KB  conda-forge
+    sysroot_linux-64-2.12      |      h77966d4_13        30.2 MB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        93.0 MB
+
+The following NEW packages will be INSTALLED:
+
+  binutils_impl_lin~ pkgs/main/linux-64::binutils_impl_linux-64-2.35.1-hd53bc6c_1
+  binutils_linux-64  conda-forge/linux-64::binutils_linux-64-2.35-hc3fd857_29
+  gcc_impl_linux-64  conda-forge/linux-64::gcc_impl_linux-64-9.3.0-h70c0ae5_18
+  gcc_linux-64       conda-forge/linux-64::gcc_linux-64-9.3.0-h7247604_29
+  kernel-headers_li~ conda-forge/noarch::kernel-headers_linux-64-2.6.32-h77966d4_13
+  libgcc-devel_linu~ conda-forge/linux-64::libgcc-devel_linux-64-9.3.0-h7864c58_18
+  python_abi         conda-forge/linux-64::python_abi-3.8-1_cp38
+  sysroot_linux-64   conda-forge/noarch::sysroot_linux-64-2.12-h77966d4_13
+
+The following packages will be UPDATED:
+
+  certifi            pkgs/main::certifi-2020.12.5-py38h06a~ --> conda-forge::certifi-2020.12.5-py38h578d9bd_1
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  ca-certificates    pkgs/main::ca-certificates-2021.1.19-~ --> conda-forge::ca-certificates-2020.12.5-ha878542_0
+  conda               pkgs/main::conda-4.9.2-py38h06a4308_0 --> conda-forge::conda-4.9.2-py38h578d9bd_0
+  openssl              pkgs/main::openssl-1.1.1i-h27cfd23_0 --> conda-forge::openssl-1.1.1i-h7f98852_0
+
+
+Proceed ([y]/n)?
+
+
+```
+Press *y*
+
+
+
+
+
+Log info
+
+
+```
+Downloading and Extracting Packages
+ca-certificates-2020 | 137 KB    | #################################################################################################################################################################### | 100%
+binutils_linux-64-2. | 22 KB     | #################################################################################################################################################################### | 100%
+python_abi-3.8       | 4 KB      | #################################################################################################################################################################### | 100%
+certifi-2020.12.5    | 143 KB    | #################################################################################################################################################################### | 100%
+binutils_impl_linux- | 9.5 MB    | #################################################################################################################################################################### | 100%
+gcc_impl_linux-64-9. | 43.1 MB   | #################################################################################################################################################################### | 100%
+openssl-1.1.1i       | 2.1 MB    | #################################################################################################################################################################### | 100%
+libgcc-devel_linux-6 | 4.0 MB    | #################################################################################################################################################################### | 100%
+conda-4.9.2          | 3.0 MB    | #################################################################################################################################################################### | 100%
+kernel-headers_linux | 707 KB    | #################################################################################################################################################################### | 100%
+gcc_linux-64-9.3.0   | 23 KB     | #################################################################################################################################################################### | 100%
+sysroot_linux-64-2.1 | 30.2 MB   | #################################################################################################################################################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+
+```
+
+
+
+
