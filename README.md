@@ -911,6 +911,14 @@ conda install pbipa
 
 ```
 
+Run on data
+
+```python
+
+/usr/bin/time -o out.ram.txt -v ipa local --nthreads 16 --njobs 2 -i ~/datafile/001.i.bat.pacbio.hifi.reads/S_unknown.ccs.merged.fasta &> log &
+
+```
+
 
 
 # Docker installation
