@@ -1480,4 +1480,52 @@ Executing transaction: done
 
 
 
+### Today 31 March 2021
 
+On new Centos
+
+First install gcc
+
+
+```
+
+sudo yum group install "Development Tools"
+
+```
+
+
+Check 
+
+```
+
+gcc --version
+```
+
+
+
+Got this
+
+
+```
+
+[yedomon@localhost]$ gcc --version
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+```
+
+
+Now trying to install PAML tool
+
+```
+$ wget http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz
+$ tar xf paml4.9j.tgz
+$ cd paml4.9j
+$ rm bin/*.exe
+$ cd src
+$ make -f Makefile
+$ ls -lF
+$ mv baseml basemlg codeml pamp evolver yn00 mcmctree chi2 ../bin
+```
