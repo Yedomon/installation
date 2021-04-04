@@ -1,7 +1,36 @@
 # Installation
+##Install gblocks
+
+wget http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_Linux64_0.91b.tar.Z
+
+tar zxvf Gblocks_Linux_0.91b.tar.Z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Miniconda3 
+
+
+
+
+
+
+
+
+
+
 
 
 
