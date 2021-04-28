@@ -1626,3 +1626,11 @@ optional arguments:
                         with '>' or '<' in their location [False]
 
 ```
+
+
+
+Server settings code
+
+
+
+![img](https://github.com/Yedomon/installation/blob/main/1612687510844.png)
